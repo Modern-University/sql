@@ -24,7 +24,7 @@ git clone https://github.com/Modern-University/sql-with-editor.git
 ### Initiate app
 1. Move into the `initiate-app` directory if you aren't already in there:
 ```
-cd ~/tutorials/modern_unviversity/sql-with-editor/initiate/app
+cd ~/tutorials/modern_university/sql-with-editor/initiate/app
 ```
 
 The first time you run this, make sure you are on a good internet connection.
