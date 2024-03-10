@@ -1,31 +1,39 @@
-# SQLPad
+# Complete intro to SQL with Editor
 
-A web app for writing and running SQL queries and visualizing the results. Supports Postgres, MySQL, SQL Server, ClickHouse, Crate, Vertica, Trino, Presto, SAP HANA, Cassandra, Google BigQuery, SQLite, TiDB and many more via [ODBC](https://github.com/sqlpad/sqlpad/wiki/ODBC).
+Complete intro to SQL is one of the best SQL courses out there. Brian Holt is a great teacher.
 
-![SQLPad Query Editor](https://user-images.githubusercontent.com/303966/99915755-32f78e80-2ccb-11eb-9f74-b18846d6108d.png)
+The problem is it requires familiarity with node.js, Docker, and other services.
 
-## Project Status
+We have removed these dependencies by connecting the databases to a browser based code editor. You will be able to use this editor to query the database. This will help you focus on just learning SQL and avoid any other complexities.
 
-SQLPad is a legacy project in maintenance mode. If evaluating SQLPad, please consider a [potential alternative](https://getsqlpad.com/en/introduction/#alternatives) or forking the project and making it your own.
+We use [SQLPad's](https://github.com/sqlpad/sqlpad/tree/master) (legacy) web browser SQL code editor. Everything is already configured.
 
-Maintenance releases for security and dependency updates will continue as possible.
+## Setup Instructions
+Move into the `initiate-app` directory.
+```
+cd initiate/app
+```
 
-**As of version 7, semver is no longer followed**. Going forward patch updates may require major Node.js version updates, or contain removal of functionality.
+The first time you run this, make sure you are on a good internet connection.
+The first time this runs, it will take about 3-5 minutes
 
-## Docker Image
+Start the app!
+```
+docker-compose pull
+docker-compose build
+docker-compose up
+```
+You will see a lot of messages being logged to your terminal.
 
-The docker image runs on port 3000 and uses `/var/lib/sqlpad` for the embedded database directory.
+You will know everything is ready once the messages stop and the last one says something like this:
+>app-db-1      | 2024-03-10 14:14:07.723 UTC [1] LOG:  database system is ready to accept connections
 
-See [docker-examples](https://github.com/sqlpad/sqlpad/tree/master/docker-examples) for docker-compose examples.
+This means we are ready!
 
-## Project Documentation
+Visit http://localhost:3000 to get started!
 
-Documentation located at [https://getsqlpad.com](https://getsqlpad.com).
-
-## Development
-
-For instructions on installing/running SQLPad from git repo see [DEVELOPER-GUIDE.md](https://github.com/sqlpad/sqlpad/blob/master/DEVELOPER-GUIDE.md)
+The next time you start the app, it should be much faster and the last message will be something like:
+> app-sqlpad-1  | {"level":30,"time":"2024-03-10T14:19:35.503Z","pid":1,"hostname":"sqlpad","name":"sqlpad-app","msg":"Welcome to SQLPad! Visit http://localhost:3000 to get started"}
 
 ## License
-
 MIT
