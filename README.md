@@ -1,6 +1,6 @@
 # Complete intro to SQL with Editor
 
-Complete intro to SQL is one of the best SQL courses out there. Brian Holt is a great teacher.
+[Complete intro to SQL](https://sql.holt.courses/) is one of the best SQL courses out there. Brian Holt is a great teacher.
 
 The problem is it requires familiarity with node.js, Docker, and other services.
 
