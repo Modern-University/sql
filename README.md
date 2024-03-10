@@ -18,7 +18,7 @@ brew install -g yarn
 
 2. Clone this repo
 ```
-cd ~/tutorials/modern_unviversity/
+cd ~/tutorials/modern_university/
 git clone https://github.com/Modern-University/sql-with-editor.git
 ```
 ### Initiate app
