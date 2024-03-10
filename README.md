@@ -9,7 +9,15 @@ We have removed these dependencies by connecting the databases to a browser base
 We use [SQLPad's](https://github.com/sqlpad/sqlpad/tree/master) (legacy) web browser SQL code editor. Everything is already configured.
 
 ## Setup Instructions
-Move into the `initiate-app` directory.
+
+### Prequisites
+Install yarn. You can run this anywhere in Terminal
+```
+brew install -g yarn
+```
+
+### Initiate app
+1. Move into the `initiate-app` directory if you aren't already in there:
 ```
 cd initiate/app
 ```
@@ -17,7 +25,7 @@ cd initiate/app
 The first time you run this, make sure you are on a good internet connection.
 The first time this runs, it will take about 3-5 minutes
 
-Start the app!
+2. Start the app!
 ```
 docker-compose pull
 docker-compose build
@@ -34,6 +42,13 @@ Visit http://localhost:3000 to get started!
 
 The next time you start the app, it should be much faster and the last message will be something like:
 > app-sqlpad-1  | {"level":30,"time":"2024-03-10T14:19:35.503Z","pid":1,"hostname":"sqlpad","name":"sqlpad-app","msg":"Welcome to SQLPad! Visit http://localhost:3000 to get started"}
+
+## Reset
+If we need to start over for any reason, we will need to reset everything.
+```
+docker-compose down -v
+```
+Afterwards, you can start at "Initiate App 2. Start the app!"
 
 ## License
 MIT

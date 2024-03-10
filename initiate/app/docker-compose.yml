@@ -7,17 +7,14 @@ services:
       POSTGRES_PASSWORD: lol
     ports:
       - 1234:80
-    # volumes:
-      # - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-  # db:
-  #   image: btholt/complete-intro-to-sql
-  #   environment:
-  #     POSTGRES_PASSWORD: lol
-  #   ports:
-  #     - 5432:5432
+  db:
+    image: btholt/complete-intro-to-sql
+    environment:
+      POSTGRES_PASSWORD: lol
+    ports:
+      - 5432:5432
 
   sqlpad:
-    # To use Dockerfile at root of this project, use build instead of image
     image: sqlpad/sqlpad:5
     hostname: 'sqlpad'
     ports:
